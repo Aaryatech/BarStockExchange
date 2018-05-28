@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/nav_header_home"
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#333333">
+
+                <LinearLayout
+                    android:id="@+id/llAdminMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/home_icon"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Home"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuCallWaiter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/waiter_icon"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Customer Request"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuAddUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/aboutus_icon"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="User Master"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuAddCustomer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/customer_icon"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Customer Master"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuAddCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/add_category_icon"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Category Master"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuAddItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/add_item_icon"
+                        android:drawablePadding="20dp"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Item Master"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuAddTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/table_icon"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Table Master"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuUpdateStock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/update_stock_icon"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Update Stock"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuUpdateRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/update_rate_icon"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Update Rate"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuViewOrders"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/update_stock_icon"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="View Orders"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuBillDayEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@drawable/ic_bill_close"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Bill Day End"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuBillGenerate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/generate_bill"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Generate Bill"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuViewBill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/view_bill"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="View Bill"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuOutlet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/outlet_icon"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Outlet"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuDirections"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/direction_icon"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Directions"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuNews"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/news_icon"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="News"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuReports"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@drawable/ic_reports"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Reports"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuRejectedOrderReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@drawable/ic_reports"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Rejected Orders Report"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuSettings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@drawable/settings_icon"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Settings"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuPrinterSettings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@drawable/ic_print"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Printer IP"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuRateApp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/rate_icon"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Rate the App"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuAboutUs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/aboutus_icon"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="About Us"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuAboutDev"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/dev_icon"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="About the Developers"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuTerms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@mipmap/terms_icon"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Terms and Condition"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvAdminMenuSignOut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/drawer_back"
+                        android:drawableLeft="@drawable/sign_out"
+                        android:drawablePadding="20dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:singleLine="true"
+                        android:text="Sign Out"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

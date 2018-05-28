@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@color/colorBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_margin="0.5dp"
+            android:background="@color/colorBlack"
+            android:id="@+id/tvOrderItems_name"
+            android:fontFamily="@font/sofiapro_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lines="2"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:layout_gravity="center"
+            android:background="@color/colorBlack"
+            android:layout_margin="0.5dp"
+            android:fontFamily="@font/sofiapro_light"
+            android:id="@+id/tvOrderItems_qty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:lines="2"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:layout_margin="0.5dp"
+            android:background="@color/colorBlack"
+            android:fontFamily="@font/sofiapro_light"
+            android:id="@+id/tvOrderItems_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:lines="2"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+</LinearLayout>

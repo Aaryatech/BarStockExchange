@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvQtyTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/sofiapro_bold"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Select Quantity to Order"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+    <ListView
+        android:layout_marginTop="10dp"
+        android:id="@+id/lvQtyDialog"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:divider="@color/colorWhite"
+        android:dividerHeight="0.5dp" />
+
+</LinearLayout>

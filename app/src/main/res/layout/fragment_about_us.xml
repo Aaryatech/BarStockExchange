@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="com.ats.barstockexchange.fragment.AboutUsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/sofiapro_light"
+            android:text="SHAIL STOCK EXCHANGE is Aurangabads  First Concept BAR with An APP Its Inspired from our Stock Market and Gives You Experience Similar as Trading in it .Prices of Drinks (Alcoholic beverages) change based on real Time Demand. Customers can also place Order As Prices can be Monitored and ordered in Real Time via Specially Developed APP Available On Both Platforms IOS and Android.Think of it as a place Where its Happy Hour All Day Long..! Where Prices Start as low as MRP.
+
+\n\nThe APP Has Been Developed By Geneka Technologies Pvt Ltd."
+            android:textColor="@color/colorText"
+            android:textSize="16sp" />
+
+    </ScrollView>
+
+</LinearLayout>

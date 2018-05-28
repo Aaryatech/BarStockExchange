@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="com.ats.barstockexchange.activity.AddMixerActivity">
+
+    <Button
+        android:id="@+id/btnAddMixer_proceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Proceed"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorBlack"
+        android:background="@color/colorOrange"/>
+
+    <ListView
+        android:layout_above="@id/btnAddMixer_proceed"
+        android:layout_alignParentTop="true"
+        android:id="@+id/lvAddMixer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/colorWhite"
+        android:dividerHeight="1dp" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#201F1E"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_centerInParent="true"
+            android:layout_width="290dp"
+            android:layout_height="130dp"
+            android:scaleType="fitStart"
+            android:src="@drawable/glass_loading_opt" />
+
+        <TextView
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="52dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/sofiapro_light"
+            android:gravity="center_horizontal"
+            android:text="Loading...."
+            android:textColor="@color/colorOrange"
+            android:textSize="25sp" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

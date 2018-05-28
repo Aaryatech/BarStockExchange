@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/splash"
+    android:orientation="vertical"
+    tools:context="com.ats.barstockexchange.fragment.WaiterFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80ababab"
+        android:orientation="vertical">
+
+        <GridView
+            android:id="@+id/gvWaiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:numColumns="3" />
+
+    </LinearLayout>
+
+</LinearLayout>

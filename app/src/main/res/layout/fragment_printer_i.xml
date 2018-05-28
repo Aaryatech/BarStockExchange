@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/back"
+    android:gravity="center"
+    tools:context="com.ats.barstockexchange.fragment.PrinterIPFragment">
+
+    <EditText
+        android:textColor="@color/colorWhite"
+        android:id="@+id/edIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/edittext_border"
+        android:gravity="center"
+        android:hint="Printer IP "
+        android:maxLines="1"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="@color/colorWhite" />
+
+    <Button
+        android:id="@+id/btnPrinterSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorOrange"
+        android:fontFamily="@font/sofiapro_bold"
+        android:text="Save"
+        android:textColor="@color/colorBlack" />
+
+    <Button
+        android:layout_margin="10dp"
+        android:id="@+id/btnPrinterTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorOrange"
+        android:fontFamily="@font/sofiapro_bold"
+        android:text="   Sample Print   "
+        android:textColor="@color/colorBlack" />
+
+</LinearLayout>

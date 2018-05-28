@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/back"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.ats.barstockexchange.activity.PrinterSettingActivity">
+
+   <!-- <EditText
+        android:textColor="@color/colorWhite"
+        android:id="@+id/edIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/edittext_border"
+        android:gravity="center"
+        android:hint="Printer IP "
+        android:inputType="number"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColorHint="@color/colorWhite" />
+
+    <Button
+        android:id="@+id/btnPrinterSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorOrange"
+        android:fontFamily="@font/sofiapro_bold"
+        android:text="Save"
+        android:textColor="@color/colorBlack" />
+-->
+
+</LinearLayout>

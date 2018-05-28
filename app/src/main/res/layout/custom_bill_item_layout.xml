@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:background="@color/colorBlack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="@color/colorText"
+            android:id="@+id/tvCustomViewOrderItem_Item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/sofiapro_light"
+            android:text="Item" />
+
+        <TextView
+            android:id="@+id/tvCustomViewOrderItem_Qty"
+            android:textColor="@color/colorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/sofiapro_light"
+            android:text="Quantity" />
+
+        <TextView
+            android:textColor="@color/colorText"
+            android:id="@+id/tvCustomViewOrderItem_Rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/sofiapro_light"
+            android:text="Rate" />
+
+    </LinearLayout>
+
+</LinearLayout>

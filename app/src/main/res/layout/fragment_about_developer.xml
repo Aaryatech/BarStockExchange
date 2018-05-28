@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="com.ats.barstockexchange.fragment.AboutDeveloperFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:fontFamily="@font/sofiapro_light"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:text="ATS is an emerging IT firm having head office at Nashik and branch office at Pune. ATS works with the mission,to be a support system of customers to achieve their business goals, by providing Best-in-class IT solutions.
+            \n\nATS working with solution centric approach, to provide appropriate solution we master and use best suitable technologieslike php for web apps, iOS , android for native mobile apps and unity for innovative solutions. ATS provides a range of IT services / products mainly for sales, office automation and online promotion domain to multiple enterprises across India and abroad.
+        \n\nThe organization has already begun making a mark for itself in the industry in a relatively short span of time through its ability and commitments to its clients. We are committed to our client's success by enhancing their return on investment as partners."
+            android:textColor="@color/colorText" />
+
+    </ScrollView>
+
+</LinearLayout>

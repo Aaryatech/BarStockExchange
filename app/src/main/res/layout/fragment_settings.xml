@@ -1,0 +1,210 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context="com.ats.barstockexchange.fragment.SettingsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_margin="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sofiapro_bold"
+                    android:text="GAME"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp" />
+
+                <ToggleButton
+                    android:id="@+id/gameToggleBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Game"
+                    android:textOff="OFF"
+                    android:textOn="ON" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llSettingForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tvSettings_Id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/sofiapro_bold"
+                    android:text="Select Mode"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="#bcb9b9" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbSettings_Game"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:text="Game"
+                        android:textColor="@color/colorText"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbSettings_Regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:text="Regular"
+                        android:textColor="@color/colorText"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbSettings_Special"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:text="Special"
+                        android:textColor="@color/colorText"
+                        android:textSize="16sp" />
+
+                </RadioGroup>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginBottom="20dp"
+                    android:clipToPadding="false"
+                    android:gravity="bottom"
+                    android:textColorHint="@color/colorText">
+
+                    <EditText
+                        android:id="@+id/edSettings_Latitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/edittext_border_layout"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:hint="Latitude"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorText"
+                        android:textColorHint="@color/colorText" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginBottom="20dp"
+                    android:clipToPadding="false"
+                    android:gravity="bottom"
+                    android:textColorHint="@color/colorText">
+
+                    <EditText
+                        android:id="@+id/edSettings_Longitude"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/edittext_border_layout"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:hint="Longitude"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorText"
+                        android:textColorHint="@color/colorText" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginBottom="20dp"
+                    android:clipToPadding="false"
+                    android:gravity="bottom"
+                    android:textColorHint="@color/colorText">
+
+                    <EditText
+                        android:id="@+id/edSettings_Radius"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/edittext_border_layout"
+                        android:fontFamily="@font/sofiapro_light"
+                        android:hint="Radius"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorText"
+                        android:textColorHint="@color/colorText" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+                <TextView
+                    android:id="@+id/tvSettings_Save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@color/colorOrange"
+                    android:fontFamily="@font/sofiapro_light"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="Save"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
