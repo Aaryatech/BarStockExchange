@@ -418,14 +418,13 @@ public class AdminHomeFragment extends Fragment {
                     tvRate.setText("" + String.format("%.0f", displayedValues.get(position).getOpeningRate()));
 
                     final float mean = (displayedValues.get(position).getMaxRate() + displayedValues.get(position).getMinRate()) / 2;
-                    if (displayedValues.get(position).getOpeningRate() > mean) {
-                        ivArrow.setImageResource(R.mipmap.up_icon);
+                    if (displayedValues.get(position).getOpeningRate() > displayedValues.get(position).getMinRate()) {
+                        ivArrow.setImageResource(R.drawable.ic_up_high);
                         tvRate.setBackgroundColor(getResources().getColor(R.color.colorHigh));
                     } else {
-                        ivArrow.setImageResource(R.mipmap.down_icon);
+                        ivArrow.setImageResource(R.drawable.ic_down_low);
                         tvRate.setBackgroundColor(getResources().getColor(R.color.colorLow));
                     }
-
 
                 } else if (settings.getAppMode().equalsIgnoreCase("Special")) {
                     ivArrow.setVisibility(View.GONE);
@@ -738,7 +737,6 @@ public class AdminHomeFragment extends Fragment {
                         getAllCatAndItemsOnResume();
                     } catch (Exception e) {
                     }
-
 
                     ha.postDelayed(this, 10000);
                 }

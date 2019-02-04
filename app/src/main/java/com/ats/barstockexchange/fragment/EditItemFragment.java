@@ -406,11 +406,12 @@ public class EditItemFragment extends Fragment implements View.OnClickListener {
                 Toast.makeText(getContext(), "Please Enter CGST Tax", Toast.LENGTH_SHORT).show();
                 edCgst.requestFocus();
             }  else {
+
                 int mixer = 1;
                 if (cbMixer.isChecked()) {
-                    mixer = 0;
-                } else {
                     mixer = 1;
+                } else {
+                    mixer = 0;
                 }
 
                 float game = Float.parseFloat(edMrpGame.getText().toString());

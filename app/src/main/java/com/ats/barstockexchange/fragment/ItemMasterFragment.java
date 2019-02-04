@@ -291,7 +291,6 @@ public class ItemMasterFragment extends Fragment implements View.OnClickListener
             ImageView ivpopup = v.findViewById(R.id.ivItemMaster_popup);
             LinearLayout llItemDetails = v.findViewById(R.id.llItemMaster_View);
 
-
             tvTitle.setText("" + displayedValues.get(position).getItemName());
             tvDesc.setText("" + displayedValues.get(position).getItemDesc());
             tvStock.setText("" + displayedValues.get(position).getCurrentStock());

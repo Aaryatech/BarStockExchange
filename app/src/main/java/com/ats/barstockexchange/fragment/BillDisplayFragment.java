@@ -559,6 +559,7 @@ public class BillDisplayFragment extends Fragment implements View.OnClickListene
                                                 header.setDiscount(data.getBill().get(j).getDiscount());
                                                 header.setPayableAmount(data.getBill().get(j).getPayableAmt());
                                                 header.setBillNo(data.getBill().get(j).getBillNo());
+                                                header.setTableNo(data.getBill().get(j).getTableNo());
                                             }
                                         }
                                         header.setCustomBillItems(itemsArray);

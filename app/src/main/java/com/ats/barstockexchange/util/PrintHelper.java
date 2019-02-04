@@ -79,7 +79,7 @@ public class PrintHelper implements ReceiveListener {
         this.printReceiptType = printReceiptType;
     }
 
-    public PrintHelper(Activity activity, String printerAddress, int modelConstant, OrderDisplay orderDisplay, int printReceiptType, String captainName,ArrayList<Table> tableNameArray) {
+    public PrintHelper(Activity activity, String printerAddress, int modelConstant, OrderDisplay orderDisplay, int printReceiptType, String captainName, ArrayList<Table> tableNameArray) {
         this.activity = activity;
         this.printerAddress = printerAddress;
         this.modelConstant = Printer.TM_T82;
@@ -89,7 +89,7 @@ public class PrintHelper implements ReceiveListener {
         this.tableNameArray = tableNameArray;
     }
 
-    public PrintHelper(Activity activity, String printerAddress, int modelConstant, OrderEntry orderEntry, ArrayList<OrderItem> orderItemArrayList, int printReceiptType, String captainName,ArrayList<Table> tableNameArray) {
+    public PrintHelper(Activity activity, String printerAddress, int modelConstant, OrderEntry orderEntry, ArrayList<OrderItem> orderItemArrayList, int printReceiptType, String captainName, ArrayList<Table> tableNameArray) {
         this.activity = activity;
         this.printerAddress = printerAddress;
         this.modelConstant = Printer.TM_T82;
@@ -101,7 +101,7 @@ public class PrintHelper implements ReceiveListener {
 
     }
 
-    public PrintHelper(Activity activity, String printerAddress, int modelConstant, CustomBillHeader billHeader, int printReceiptType,ArrayList<Table> tableNameArray) {
+    public PrintHelper(Activity activity, String printerAddress, int modelConstant, CustomBillHeader billHeader, int printReceiptType, ArrayList<Table> tableNameArray) {
         this.activity = activity;
         this.printerAddress = printerAddress;
         this.modelConstant = Printer.TM_T82;
@@ -135,10 +135,10 @@ public class PrintHelper implements ReceiveListener {
 
         if (printReceiptType == PrintReceiptType.BILL) {
             //create bill invoice
-            return createBillReceiptPrint(customBillHeader);
+            return createBillReceiptPrint(customBillHeader, tableNameArray);
         } else if (printReceiptType == PrintReceiptType.KOT) {
             //create KOT invoice
-            return createKOTReceipt(orderDisplays,tableNameArray);
+            return createKOTReceipt(orderDisplays, tableNameArray);
         } else if (printReceiptType == PrintReceiptType.REPORT) {
             //create REPORT print
             return createReportPrint(reportDisplayArray, date);
@@ -147,7 +147,7 @@ public class PrintHelper implements ReceiveListener {
             return createBillReceiptPrintAfterGenerate(billOutput, tableNameArray);
         } else if (printReceiptType == PrintReceiptType.KOT_CAPTAIN) {
             //create bill invoice
-            return createKOTReceiptByCaptain(orderEntry, orderItemArrayList,tableNameArray);
+            return createKOTReceiptByCaptain(orderEntry, orderItemArrayList, tableNameArray);
         } else {
             return createTestReceipt();
         }
@@ -350,7 +350,7 @@ public class PrintHelper implements ReceiveListener {
     }
 
 
-    private boolean createBillReceiptPrint(CustomBillHeader billHeader) {
+   /* private boolean createBillReceiptPrint(CustomBillHeader billHeader) {
         String method = "";
         StringBuilder textData = new StringBuilder();
 
@@ -370,6 +370,177 @@ public class PrintHelper implements ReceiveListener {
 
             textData.append("Bill No :- " + billHeader.getBillNo() + "\t" + date + "\n\n");
             // textData.append("\t\t\t Table No :- " + tableNo + "\n\n");
+
+            Log.e("OrderItems : ", "-----------" + orderItems.toString());
+
+            textData.append("Item");
+            for (int i = 0; i < 16; i++) {
+                textData.append(" ");
+            }
+            textData.append("   Qty");
+            textData.append("     Rate");
+            textData.append("    Amount\n");
+
+            for (int i = 0; i < 45; i++) {
+                textData.append("-");
+            }
+            textData.append("\n");
+
+            mPrinter.addTextStyle(Printer.FALSE, Printer.FALSE, Printer.TRUE, Printer.COLOR_1);
+
+            double billTotal = 0;
+
+            for (int i = 0; i < orderItems.size(); i++) {
+
+                String strName = orderItems.get(i).getItemName();
+                if (strName.length() >= 20) {
+                    String itemName = orderItems.get(i).getItemName().substring(0, 20);
+                    textData.append(itemName);
+
+                } else if (strName.length() < 20) {
+                    textData.append(strName);
+                    int difference = 20 - strName.length();
+
+                    for (int d = 0; d < difference; d++) {
+                        textData.append(" ");
+                    }
+                }
+
+                String qty = String.valueOf(orderItems.get(i).getQuantity());
+                double totalDouble = orderItems.get(i).getRate() * orderItems.get(i).getQuantity();
+                //String rate = String.valueOf(rateDouble);
+                String total = String.format("%.1f", totalDouble);
+                String rate = String.valueOf(orderItems.get(i).getRate());
+
+                billTotal = billTotal + totalDouble;
+
+
+                try {
+
+                    textData.append("   " + qty);
+                    int difference = 3 - qty.length();
+                    for (int d = 0; d < difference; d++) {
+                        textData.append(" ");
+                    }
+
+                    textData.append("   ");
+
+                    difference = 6 - rate.length();
+                    for (int d = 0; d < difference; d++) {
+                        textData.append(" ");
+                    }
+                    textData.append("" + rate);
+
+                    textData.append("   ");
+
+                    difference = 7 - total.length();
+                    for (int d = 0; d < difference; d++) {
+                        textData.append(" ");
+                    }
+                    textData.append("" + total + "\n");
+
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            for (int i = 0; i < 45; i++) {
+                textData.append("-");
+            }
+            textData.append("\n");
+
+            String bTot = "Bar Total : " + String.format("%.2f", billTotal);
+            int difference = 45 - bTot.length();
+            for (int d = 0; d < difference; d++) {
+                textData.append(" ");
+            }
+            textData.append(bTot + "\n");
+
+            int billDisc = (int) billHeader.getDiscount();
+            String disc = "Discount : " + billDisc + " %";
+            difference = 45 - disc.length();
+            for (int d = 0; d < difference; d++) {
+                textData.append(" ");
+            }
+            textData.append(disc + "\n");
+
+
+            String gst = "VAT : 5 %";
+            difference = 45 - gst.length();
+            for (int d = 0; d < difference; d++) {
+                textData.append(" ");
+            }
+            textData.append(gst + "\n");
+
+            //textData.append("\nDiscount :- " + billHeader.getDiscount());
+            //textData.append("\t Total :- " + billHeader.getPayableAmount() + "\n");
+
+            for (int i = 0; i < 45; i++) {
+                textData.append("-");
+            }
+            textData.append("\n");
+
+            String grandTotal = "GRAND TOTAL : " + String.format("%.2f", billHeader.getPayableAmount());
+            difference = 45 - grandTotal.length();
+            for (int d = 0; d < difference; d++) {
+                textData.append(" ");
+            }
+            textData.append(grandTotal + "\n");
+
+            //textData.append("GRAND TOTAL : " + billHeader.getPayableAmount() + "\n");
+
+            for (int i = 0; i < 45; i++) {
+                textData.append("-");
+            }
+            textData.append("\n");
+
+            //textData.append("Soft drink & TBC 5 % GST\n");
+            textData.append("GSTNo : 27ABGPJ9389N1ZP\n\n");
+
+
+            mPrinter.addText(textData.toString());
+            Log.e("Print ", "\n\n" + textData.toString());
+
+            mPrinter.addCut(Printer.CUT_FEED);
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            ShowMsg.showException(e, method, activity, false);
+            return false;
+        }
+        return true;
+    }*/
+
+
+    private boolean createBillReceiptPrint(CustomBillHeader billHeader, ArrayList<Table> tableArray) {
+        String method = "";
+        StringBuilder textData = new StringBuilder();
+
+        try {
+            ArrayList<CustomBillItems> orderItems = (ArrayList<CustomBillItems>) billHeader.getCustomBillItems();
+
+            method = "addTextAlign";
+            mPrinter.addTextAlign(Printer.ALIGN_LEFT);
+            method = "addFeedLine";
+            mPrinter.addFeedLine(1);
+            String date = billHeader.getBillDate();
+            textData.append("\t\t\bHotel Shail\n");
+            textData.append("\tKokanwadi Railway St. Road\n");
+            textData.append("\t\tAurangabad\n\n");
+
+            // textData.append(date + "\n");
+
+            textData.append("Bill No :- " + billHeader.getBillNo() + "\t" + date + "\n");
+
+            String tableNo = "";
+            for (int i = 0; i < tableArray.size(); i++) {
+                if (tableArray.get(i).getTableNo() == billHeader.getTableNo()) {
+                    tableNo = tableArray.get(i).getTableName();
+                }
+            }
+            textData.append("Table No :- " + "\n\n");
 
             Log.e("OrderItems : ", "-----------" + orderItems.toString());
 

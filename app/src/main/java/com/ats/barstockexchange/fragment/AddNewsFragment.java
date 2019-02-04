@@ -101,6 +101,8 @@ public class AddNewsFragment extends Fragment implements View.OnClickListener {
         ivClick = view.findViewById(R.id.ivAddNews_ClickImage);
         ivViewImage = view.findViewById(R.id.ivAddNews_ViewImage);
 
+        ivClick.setOnClickListener(this);
+
 
         return view;
     }
@@ -301,7 +303,9 @@ public class AddNewsFragment extends Fragment implements View.OnClickListener {
             } else if (edDesc.getText().toString().isEmpty()) {
                 Toast.makeText(getContext(), "Please Enter Description", Toast.LENGTH_SHORT).show();
                 edDesc.requestFocus();
-            } else {
+            }else if (imageEncoded_pic==null ||imageEncoded_pic.isEmpty()){
+                Toast.makeText(getContext(), "Please Add Photo", Toast.LENGTH_SHORT).show();
+            }else {
                 String title = edTitle.getText().toString();
                 String desc = edDesc.getText().toString();
                 addNews(title, imageEncoded_pic, desc, userId);
@@ -313,6 +317,8 @@ public class AddNewsFragment extends Fragment implements View.OnClickListener {
             ivViewImage.setImageResource(0);
             edTitle.requestFocus();
 
+        }else if (v.getId() == R.id.ivAddNews_ClickImage) {
+            startDialog(CAMERA_PICTURE, GALLERY_PICTURE);
         }
     }
 }

@@ -44,10 +44,12 @@ import retrofit2.http.Query;
 
 public interface InterfaceApi {
 
-    public static final String URL = "http://132.148.143.124:8080/BSEWebApis/";
-    //public static final String URL = "http://192.168.2.2:8062/";
+   // public static final String URL = "http://132.148.143.124:8080/BSEWebApis/";
+   // public static final String URL = "http://192.168.2.18:8062/";
 
-    public static final String IMAGE_PATH = "http://132.148.143.124:8080/BSEWebApis/images/";
+    public static final String URL = "http://148.72.209.226:8080/BSEWebApis/";
+
+    public static final String IMAGE_PATH = "http://148.72.209.226:8080/BSEWebApis/images/";
 
     public static final String MY_PREF = "BSE_Admin";
 

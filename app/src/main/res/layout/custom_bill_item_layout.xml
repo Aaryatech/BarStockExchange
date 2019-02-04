@@ -12,6 +12,8 @@
         android:orientation="horizontal">
 
         <TextView
+            android:lines="2"
+            android:maxLines="3"
             android:textColor="@color/colorText"
             android:id="@+id/tvCustomViewOrderItem_Item"
             android:layout_width="match_parent"

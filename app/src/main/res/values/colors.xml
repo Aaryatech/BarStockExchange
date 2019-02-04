@@ -9,8 +9,8 @@
     <color name="colorText">#bcb9b9</color>
     <color name="colorBlack">#000000</color>
     <color name="colorOrange">#F6A511</color>
-    <color name="colorLow">#f56837</color>
-    <color name="colorHigh">#07d0d7</color>
+    <color name="colorLow">#07d0d7</color>
+    <color name="colorHigh">#f56837</color>
     <color name="colorGreen">#79d707</color>
     <color name="colorTransparent">#00000000</color>
     <color name="temp">#a3a0a0</color>

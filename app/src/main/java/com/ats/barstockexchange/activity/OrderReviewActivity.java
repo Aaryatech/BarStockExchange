@@ -620,6 +620,7 @@ public class OrderReviewActivity extends AppCompatActivity implements View.OnCli
                 }
                 tvUserId.setText("" + userList.get(pos).getUserId());
                 btnUser.setText("" + userList.get(pos).getFirstname());
+                Log.e("Default User","------------------------------"+userList.get(pos));
                 dialog.dismiss();
             }
         });

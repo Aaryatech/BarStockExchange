@@ -15,6 +15,7 @@ public class CustomBillHeader {
     private double payableAmount;
     private List<CustomBillItems> customBillItems;
     private int billNo;
+    private int tableNo;
 
     public CustomBillHeader(int billId, int userId, String billDate, float discount, double payableAmount, List<CustomBillItems> customBillItems) {
         this.billId = billId;
@@ -94,6 +95,14 @@ public class CustomBillHeader {
         this.billNo = billNo;
     }
 
+    public int getTableNo() {
+        return tableNo;
+    }
+
+    public void setTableNo(int tableNo) {
+        this.tableNo = tableNo;
+    }
+
     @Override
     public String toString() {
         return "CustomBillHeader{" +
@@ -104,6 +113,7 @@ public class CustomBillHeader {
                 ", payableAmount=" + payableAmount +
                 ", customBillItems=" + customBillItems +
                 ", billNo=" + billNo +
+                ", tableNo=" + tableNo +
                 '}';
     }
 }

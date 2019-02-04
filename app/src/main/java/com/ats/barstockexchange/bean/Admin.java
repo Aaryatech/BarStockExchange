@@ -11,6 +11,7 @@ public class Admin {
     private String password;
     private String type;
     private Integer delStatus;
+    private String token;
 
     public Admin(Integer adminId, String username, String password, String type, Integer delStatus) {
         this.adminId = adminId;
